@@ -21,7 +21,7 @@ TODO
 ### Cloning the repository
 
 ```shell
-git clone [https://github.com/iprime2/ecommerce-next-express.git](https://github.com/iprime2/books-MEAN.git)
+git clone https://github.com/iprime2/books-MEAN.git
 ```
 
 ## Setup Backend
