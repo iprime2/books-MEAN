@@ -1,0 +1,77 @@
+<div class="p-6 bg-gray-100">
+    <h1 class="text-2xl font-bold mb-4">Book Management</h1>
+  
+    <!-- Add Book Form -->
+    <form (ngSubmit)="addBook()" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <input
+        type="text"
+        [(ngModel)]="newBook.name"
+        name="name"
+        placeholder="Book Name"
+        class="p-2 border border-gray-300 rounded"
+        required
+      />
+      <input
+        type="number"
+        [(ngModel)]="newBook.price"
+        name="price"
+        placeholder="Price"
+        class="p-2 border border-gray-300 rounded"
+        required
+      />
+      <input
+        type="number"
+        [(ngModel)]="newBook.quantity"
+        name="quantity"
+        placeholder="Quantity"
+        class="p-2 border border-gray-300 rounded"
+        required
+      />
+      <button
+        type="submit"
+        class="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Add Book
+      </button>
+    </form>
+  
+    <!-- Book List -->
+    <table class="w-full border-collapse border border-gray-300">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border border-gray-300 p-2">Name</th>
+          <th class="border border-gray-300 p-2">Price</th>
+          <th class="border border-gray-300 p-2">Quantity</th>
+          <th class="border border-gray-300 p-2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books" class="hover:bg-gray-100">
+          <td class="border border-gray-300 p-2">
+            <input [(ngModel)]="book.name" class="p-1 border border-gray-300 rounded" />
+          </td>
+          <td class="border border-gray-300 p-2">
+            <input type="number" [(ngModel)]="book.price" class="p-1 border border-gray-300 rounded" />
+          </td>
+          <td class="border border-gray-300 p-2">
+            <input type="number" [(ngModel)]="book.quantity" class="p-1 border border-gray-300 rounded" />
+          </td>
+          <td class="border border-gray-300 p-2">
+            <button
+              (click)="updateBook(book)"
+              class="p-2 bg-green-500 text-white rounded hover:bg-green-600"
+            >
+              Save
+            </button>
+            <button
+              (click)="deleteBook(book._id)"
+              class="p-2 bg-red-500 text-white rounded hover:bg-red-600"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
