@@ -1,8 +1,12 @@
 ﻿# Books-MEAN
 
 ## Live Website/ Deployed Link
+TODO
 
 ## walkthrough videos
+TODO
+
+## Web Application Setup
 
 ### Prerequisites
 
