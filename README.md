@@ -1,9 +1,13 @@
 ﻿# Books-MEAN
 
 ## Live Website/ Deployed Link
-TODO
 
-## walkthrough videos
+### Frontend Api URL
+
+### Backend Api URL
+https://books-mean.onrender.com/api/books
+
+## Walkthrough videos
 TODO
 
 ## Web Application Setup
@@ -66,8 +70,12 @@ npm install
 ng serve
 ```
 
-## API Documnetations
+# API Documnetations
 
+This document outlines the API endpoints for managing books in the application.
+
+## Base URL
+https://books-mean.onrender.com/api/books
 
 ## Endpoints
 
